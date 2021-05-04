@@ -34,7 +34,7 @@ namespace inventory_project.view
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_users = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,7 +51,7 @@ namespace inventory_project.view
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -106,13 +106,13 @@ namespace inventory_project.view
             this.label3.TabIndex = 30;
             this.label3.Text = "Product Name";
             // 
-            // dataGridView1
+            // dgv_users
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 307);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(794, 141);
-            this.dataGridView1.TabIndex = 29;
+            this.dgv_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_users.Location = new System.Drawing.Point(0, 307);
+            this.dgv_users.Name = "dgv_users";
+            this.dgv_users.Size = new System.Drawing.Size(794, 141);
+            this.dgv_users.TabIndex = 29;
             // 
             // label2
             // 
@@ -270,7 +270,7 @@ namespace inventory_project.view
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_users);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.richTextBox1);
@@ -283,7 +283,8 @@ namespace inventory_project.view
             this.Name = "users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "users";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.users_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -300,7 +301,7 @@ namespace inventory_project.view
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_users;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel2;

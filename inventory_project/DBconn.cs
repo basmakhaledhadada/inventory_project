@@ -15,6 +15,7 @@ namespace inventory_project
         static string conf = "datasource=" + Server + ";port=" + Port + ";username=" + Username + ";password=" + Password;
 
         static MySqlConnection db;
+        
         //preform singletone
         public static MySqlConnection Connection
         {
@@ -31,6 +32,7 @@ namespace inventory_project
         static MySqlConnection CreateConnection()
         {
             var db = new MySqlConnection(conf);
+            
 
             db.Open();
             return db;
@@ -44,28 +46,6 @@ namespace inventory_project
                 db.Close();
                 db.Dispose();
                 db = null;
-            }
-        }
-        public static bool CheckMySqlConnection(string ConnectionString)
-        {
-            bool failed = false;
-            MySqlConnection conx = null;
-
-            try
-            {
-                using (conx = new MySqlConnection(ConnectionString))
-                {
-                    conx.Open();
-                    /* If we reached here, that means the connection to the database was successful. */
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                // We are here that means the connection failed!
-                // You can handle the exception differently if you want to provide richer error handling.
-                // At this moment we just return "false" which means the connection failed.
-                return false;
             }
         }
     }

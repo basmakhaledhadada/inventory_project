@@ -25,6 +25,9 @@ C:\Users\basma\source\repos\inventory_project\inventory_project\bin\Debug\System
 C:\Users\basma\source\repos\inventory_project\inventory_project\bin\Debug\MySql.Data.xml
 C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.exe.config
 C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.csproj.CopyComplete
-C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.view.bills.resources
 C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.view.category.resources
 C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.view.users.resources
+C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.view.invoice.resources
+C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.view.outvoice.resources
+C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.view.login.resources
+C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.view.signup.resources

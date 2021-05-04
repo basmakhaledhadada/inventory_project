@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\BillsController.cs" />
+    <Compile Include="controller\CategoriesController.cs" />
+    <Compile Include="controller\IDbOperations.cs" />
+    <Compile Include="controller\StockController.cs" />
+    <Compile Include="controller\UsersController.cs" />
     <Compile Include="DBconn.cs" />
     <Compile Include="model\Bills.cs" />
     <Compile Include="model\Categories.cs" />
@@ -72,11 +77,23 @@
     <Compile Include="view\home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\outvoice.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\outvoice.Designer.cs">
       <DependentUpon>outvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\signup.Designer.cs">
+      <DependentUpon>signup.cs</DependentUpon>
     </Compile>
     <Compile Include="view\stock.cs">
       <SubType>Form</SubType>
@@ -108,8 +125,14 @@
     <EmbeddedResource Include="view\home.resx">
       <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\outvoice.resx">
       <DependentUpon>outvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\signup.resx">
+      <DependentUpon>signup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\stock.resx">
       <DependentUpon>stock.cs</DependentUpon>

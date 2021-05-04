@@ -8,5 +8,20 @@ namespace inventory_project.model
 {
     class Stock
     {
+        public string name { get; set; }
+        public float unit_price { get; set; }
+        public string description { get; set; }
+        public int quantity { get; set; }
+        public int category { get; set; }
+
+        public Stock(string name, float unit_price, string description, int quantity, int category)
+        {
+            this.name = name;
+            this.unit_price = unit_price;
+            this.description = description;
+            this.quantity = quantity;
+            this.category = category;
+        }
+
     }
 }

@@ -24,16 +24,16 @@ namespace inventory_project.view
 
         private void home_Load(object sender, EventArgs e)
         {
-            var db = DBconn.Connection;
+            //var db = DBconn.Connection;
 
-            if (DBconn.CheckMySqlConnection("datasource=localhost;port=3306;username=root;password="))
-            {
-                label2.Text = "success!";
-            }
-            else
-            {
-                label2.Text = "faild!";
-            }
+            //if (DBconn.CheckMySqlConnection("datasource=localhost;port=3306;username=root;password="))
+            //{
+            //    label2.Text = "success!";
+            //}
+            //else
+            //{
+            //    label2.Text = "faild!";
+            //}
 
 
         }
@@ -61,6 +61,12 @@ namespace inventory_project.view
         {
             invoice billform = new invoice();
             billform.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            login l = new login();
+            l.Show();
         }
     }
 }

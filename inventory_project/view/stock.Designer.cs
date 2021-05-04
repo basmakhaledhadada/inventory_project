@@ -44,7 +44,7 @@ namespace inventory_project.view
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_stock = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace inventory_project.view
             this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_stock)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +66,6 @@ namespace inventory_project.view
             this.label1.Size = new System.Drawing.Size(209, 39);
             this.label1.TabIndex = 5;
             this.label1.Text = "STOCK MANAGMENT";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -193,13 +192,13 @@ namespace inventory_project.view
             this.button4.Text = "Search";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgv_stock
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 308);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(794, 141);
-            this.dataGridView1.TabIndex = 9;
+            this.dgv_stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_stock.Location = new System.Drawing.Point(0, 308);
+            this.dgv_stock.Name = "dgv_stock";
+            this.dgv_stock.Size = new System.Drawing.Size(794, 141);
+            this.dgv_stock.TabIndex = 9;
             // 
             // label3
             // 
@@ -210,7 +209,7 @@ namespace inventory_project.view
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 15;
             this.label3.Text = "Product Name";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+           
             // 
             // label4
             // 
@@ -273,7 +272,7 @@ namespace inventory_project.view
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_stock);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.comboBox1);
@@ -290,7 +289,7 @@ namespace inventory_project.view
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_stock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,7 +312,7 @@ namespace inventory_project.view
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_stock;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

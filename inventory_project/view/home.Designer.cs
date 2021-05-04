@@ -40,7 +40,6 @@ namespace inventory_project.view
             this.GoStock = new System.Windows.Forms.Button();
             this.GoInvoice = new System.Windows.Forms.Button();
             this.GoOutvoice = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -72,7 +71,7 @@ namespace inventory_project.view
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(426, 97);
+            this.pictureBox1.Location = new System.Drawing.Point(426, 149);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -82,7 +81,7 @@ namespace inventory_project.view
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(632, 97);
+            this.pictureBox2.Location = new System.Drawing.Point(632, 149);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 150);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,7 +91,7 @@ namespace inventory_project.view
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(219, 97);
+            this.pictureBox3.Location = new System.Drawing.Point(219, 149);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(150, 150);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,7 +101,7 @@ namespace inventory_project.view
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(12, 97);
+            this.pictureBox4.Location = new System.Drawing.Point(12, 149);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(150, 150);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,7 +115,7 @@ namespace inventory_project.view
             this.GoUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoUsers.Font = new System.Drawing.Font("Cairo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GoUsers.ForeColor = System.Drawing.Color.White;
-            this.GoUsers.Location = new System.Drawing.Point(12, 266);
+            this.GoUsers.Location = new System.Drawing.Point(12, 318);
             this.GoUsers.Name = "GoUsers";
             this.GoUsers.Size = new System.Drawing.Size(150, 38);
             this.GoUsers.TabIndex = 5;
@@ -131,7 +130,7 @@ namespace inventory_project.view
             this.GoStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoStock.Font = new System.Drawing.Font("Cairo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GoStock.ForeColor = System.Drawing.Color.White;
-            this.GoStock.Location = new System.Drawing.Point(219, 266);
+            this.GoStock.Location = new System.Drawing.Point(219, 318);
             this.GoStock.Name = "GoStock";
             this.GoStock.Size = new System.Drawing.Size(150, 38);
             this.GoStock.TabIndex = 6;
@@ -146,7 +145,7 @@ namespace inventory_project.view
             this.GoInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoInvoice.Font = new System.Drawing.Font("Cairo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GoInvoice.ForeColor = System.Drawing.Color.White;
-            this.GoInvoice.Location = new System.Drawing.Point(426, 266);
+            this.GoInvoice.Location = new System.Drawing.Point(426, 318);
             this.GoInvoice.Name = "GoInvoice";
             this.GoInvoice.Size = new System.Drawing.Size(150, 38);
             this.GoInvoice.TabIndex = 7;
@@ -161,7 +160,7 @@ namespace inventory_project.view
             this.GoOutvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoOutvoice.Font = new System.Drawing.Font("Cairo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GoOutvoice.ForeColor = System.Drawing.Color.White;
-            this.GoOutvoice.Location = new System.Drawing.Point(632, 266);
+            this.GoOutvoice.Location = new System.Drawing.Point(632, 318);
             this.GoOutvoice.Name = "GoOutvoice";
             this.GoOutvoice.Size = new System.Drawing.Size(150, 38);
             this.GoOutvoice.TabIndex = 8;
@@ -169,22 +168,11 @@ namespace inventory_project.view
             this.GoOutvoice.UseVisualStyleBackColor = false;
             this.GoOutvoice.Click += new System.EventHandler(this.GoOutvoice_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(160, 368);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
-            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 450);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.GoOutvoice);
             this.Controls.Add(this.GoInvoice);
             this.Controls.Add(this.GoStock);
@@ -207,7 +195,6 @@ namespace inventory_project.view
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -223,6 +210,5 @@ namespace inventory_project.view
         private System.Windows.Forms.Button GoStock;
         private System.Windows.Forms.Button GoInvoice;
         private System.Windows.Forms.Button GoOutvoice;
-        private System.Windows.Forms.Label label2;
     }
 }
