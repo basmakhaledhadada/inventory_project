@@ -31,19 +31,19 @@ namespace inventory_project.view
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Product_Id = new System.Windows.Forms.TextBox();
+            this.Quantity = new System.Windows.Forms.TextBox();
+            this.Unit_Price = new System.Windows.Forms.TextBox();
+            this.Product_Name = new System.Windows.Forms.TextBox();
+            this.Category = new System.Windows.Forms.ComboBox();
+            this.Description = new System.Windows.Forms.RichTextBox();
+            this.AddToStock = new System.Windows.Forms.Button();
+            this.UpdateForStock = new System.Windows.Forms.Button();
+            this.DeleteForStock = new System.Windows.Forms.Button();
+            this.Search = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.SearchForStock = new System.Windows.Forms.Button();
             this.dgv_stock = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@ namespace inventory_project.view
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.Edit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_stock)).BeginInit();
@@ -76,96 +77,104 @@ namespace inventory_project.view
             this.panel1.Size = new System.Drawing.Size(794, 67);
             this.panel1.TabIndex = 1;
             // 
-            // textBox1
+            // Product_Id
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(53, 20);
-            this.textBox1.TabIndex = 2;
+            this.Product_Id.Enabled = false;
+            this.Product_Id.Location = new System.Drawing.Point(15, 96);
+            this.Product_Id.Name = "Product_Id";
+            this.Product_Id.Size = new System.Drawing.Size(53, 20);
+            this.Product_Id.TabIndex = 2;
             // 
-            // textBox3
+            // Quantity
             // 
-            this.textBox3.Location = new System.Drawing.Point(322, 144);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 20);
-            this.textBox3.TabIndex = 4;
+            this.Quantity.Location = new System.Drawing.Point(348, 144);
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Size = new System.Drawing.Size(85, 20);
+            this.Quantity.TabIndex = 4;
             // 
-            // textBox4
+            // Unit_Price
             // 
-            this.textBox4.Location = new System.Drawing.Point(322, 96);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 20);
-            this.textBox4.TabIndex = 5;
+            this.Unit_Price.Location = new System.Drawing.Point(348, 96);
+            this.Unit_Price.Name = "Unit_Price";
+            this.Unit_Price.Size = new System.Drawing.Size(85, 20);
+            this.Unit_Price.TabIndex = 5;
             // 
-            // textBox5
+            // Product_Name
             // 
-            this.textBox5.Location = new System.Drawing.Point(117, 96);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(154, 20);
-            this.textBox5.TabIndex = 6;
+            this.Product_Name.Location = new System.Drawing.Point(117, 96);
+            this.Product_Name.Name = "Product_Name";
+            this.Product_Name.Size = new System.Drawing.Size(154, 20);
+            this.Product_Name.TabIndex = 6;
             // 
-            // comboBox1
+            // Category
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(117, 144);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 21);
-            this.comboBox1.TabIndex = 7;
+            this.Category.FormattingEnabled = true;
+            this.Category.Items.AddRange(new object[] {
+            "clean",
+            "toys",
+            "food"});
+            this.Category.Location = new System.Drawing.Point(117, 144);
+            this.Category.Name = "Category";
+            this.Category.Size = new System.Drawing.Size(154, 21);
+            this.Category.TabIndex = 7;
             // 
-            // richTextBox1
+            // Description
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(117, 215);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(154, 73);
-            this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "";
+            this.Description.Location = new System.Drawing.Point(117, 215);
+            this.Description.Name = "Description";
+            this.Description.Size = new System.Drawing.Size(154, 73);
+            this.Description.TabIndex = 8;
+            this.Description.Text = "";
             // 
-            // button1
+            // AddToStock
             // 
-            this.button1.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(55, 118);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 30);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddToStock.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddToStock.Location = new System.Drawing.Point(55, 118);
+            this.AddToStock.Name = "AddToStock";
+            this.AddToStock.Size = new System.Drawing.Size(100, 30);
+            this.AddToStock.TabIndex = 9;
+            this.AddToStock.Text = "Add";
+            this.AddToStock.UseVisualStyleBackColor = true;
+            this.AddToStock.Click += new System.EventHandler(this.AddToStock_Click);
             // 
-            // button2
+            // UpdateForStock
             // 
-            this.button2.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(55, 154);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 30);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.UpdateForStock.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateForStock.Location = new System.Drawing.Point(55, 154);
+            this.UpdateForStock.Name = "UpdateForStock";
+            this.UpdateForStock.Size = new System.Drawing.Size(100, 30);
+            this.UpdateForStock.TabIndex = 10;
+            this.UpdateForStock.Text = "Update";
+            this.UpdateForStock.UseVisualStyleBackColor = true;
+            this.UpdateForStock.Click += new System.EventHandler(this.UpdateForStock_Click);
             // 
-            // button3
+            // DeleteForStock
             // 
-            this.button3.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(55, 190);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 30);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.DeleteForStock.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteForStock.Location = new System.Drawing.Point(55, 190);
+            this.DeleteForStock.Name = "DeleteForStock";
+            this.DeleteForStock.Size = new System.Drawing.Size(100, 30);
+            this.DeleteForStock.TabIndex = 11;
+            this.DeleteForStock.Text = "Delete";
+            this.DeleteForStock.UseVisualStyleBackColor = true;
+            this.DeleteForStock.Click += new System.EventHandler(this.DeleteForStock_Click);
             // 
-            // textBox2
+            // Search
             // 
-            this.textBox2.Location = new System.Drawing.Point(17, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 20);
-            this.textBox2.TabIndex = 12;
+            this.Search.Location = new System.Drawing.Point(17, 28);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(168, 20);
+            this.Search.TabIndex = 12;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.SearchForStock);
+            this.panel2.Controls.Add(this.Search);
+            this.panel2.Controls.Add(this.UpdateForStock);
+            this.panel2.Controls.Add(this.DeleteForStock);
+            this.panel2.Controls.Add(this.AddToStock);
             this.panel2.Location = new System.Drawing.Point(595, 68);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(199, 244);
@@ -182,23 +191,25 @@ namespace inventory_project.view
             this.label2.TabIndex = 14;
             this.label2.Text = "Looking for something?";
             // 
-            // button4
+            // SearchForStock
             // 
-            this.button4.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(17, 54);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 28);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = true;
+            this.SearchForStock.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchForStock.Location = new System.Drawing.Point(17, 54);
+            this.SearchForStock.Name = "SearchForStock";
+            this.SearchForStock.Size = new System.Drawing.Size(80, 28);
+            this.SearchForStock.TabIndex = 13;
+            this.SearchForStock.Text = "Search";
+            this.SearchForStock.UseVisualStyleBackColor = true;
+            this.SearchForStock.Click += new System.EventHandler(this.SearchForStock_Click);
             // 
             // dgv_stock
             // 
             this.dgv_stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_stock.Location = new System.Drawing.Point(0, 308);
+            this.dgv_stock.Location = new System.Drawing.Point(0, 312);
             this.dgv_stock.Name = "dgv_stock";
-            this.dgv_stock.Size = new System.Drawing.Size(794, 141);
+            this.dgv_stock.Size = new System.Drawing.Size(794, 140);
             this.dgv_stock.TabIndex = 9;
+            this.dgv_stock.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_stock_CellClick);
             // 
             // label3
             // 
@@ -209,13 +220,12 @@ namespace inventory_project.view
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 15;
             this.label3.Text = "Product Name";
-           
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cairo SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(318, 73);
+            this.label4.Location = new System.Drawing.Point(344, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 16;
@@ -245,7 +255,7 @@ namespace inventory_project.view
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cairo SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(318, 123);
+            this.label7.Location = new System.Drawing.Point(344, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 20);
             this.label7.TabIndex = 19;
@@ -261,11 +271,22 @@ namespace inventory_project.view
             this.label8.TabIndex = 20;
             this.label8.Text = "Description";
             // 
+            // Edit
+            // 
+            this.Edit.Location = new System.Drawing.Point(278, 144);
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(50, 23);
+            this.Edit.TabIndex = 21;
+            this.Edit.Text = "Edit";
+            this.Edit.UseVisualStyleBackColor = true;
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
+            // 
             // stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 406);
+            this.ClientSize = new System.Drawing.Size(794, 452);
+            this.Controls.Add(this.Edit);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -274,12 +295,12 @@ namespace inventory_project.view
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgv_stock);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Description);
+            this.Controls.Add(this.Category);
+            this.Controls.Add(this.Product_Name);
+            this.Controls.Add(this.Unit_Price);
+            this.Controls.Add(this.Quantity);
+            this.Controls.Add(this.Product_Id);
             this.Controls.Add(this.panel1);
             this.Name = "stock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -299,18 +320,18 @@ namespace inventory_project.view
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Product_Id;
+        private System.Windows.Forms.TextBox Quantity;
+        private System.Windows.Forms.TextBox Unit_Price;
+        private System.Windows.Forms.TextBox Product_Name;
+        private System.Windows.Forms.ComboBox Category;
+        private System.Windows.Forms.RichTextBox Description;
+        private System.Windows.Forms.Button AddToStock;
+        private System.Windows.Forms.Button UpdateForStock;
+        private System.Windows.Forms.Button DeleteForStock;
+        private System.Windows.Forms.TextBox Search;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button SearchForStock;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgv_stock;
         private System.Windows.Forms.Label label3;
@@ -319,5 +340,6 @@ namespace inventory_project.view
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button Edit;
     }
 }

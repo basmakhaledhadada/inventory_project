@@ -59,7 +59,7 @@ namespace inventory_project.view
 
         private void GoOutvoice_Click(object sender, EventArgs e)
         {
-            invoice billform = new invoice();
+            outvoice billform = new outvoice();
             billform.Show();
         }
 

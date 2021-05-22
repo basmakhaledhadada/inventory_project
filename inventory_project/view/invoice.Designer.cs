@@ -34,24 +34,25 @@ namespace inventory_project.view
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_invoice = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.SearchForInvoice = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Search = new System.Windows.Forms.TextBox();
+            this.UpdateInvoice = new System.Windows.Forms.Button();
+            this.DeleteInvoice = new System.Windows.Forms.Button();
+            this.AddToInvoice = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Unit_Price = new System.Windows.Forms.TextBox();
+            this.Provider = new System.Windows.Forms.TextBox();
+            this.Bill_Id = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Quantity = new System.Windows.Forms.TextBox();
+            this.Date = new System.Windows.Forms.DateTimePicker();
+            this.Products = new System.Windows.Forms.ComboBox();
+            this.GoStock = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invoice)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +61,7 @@ namespace inventory_project.view
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cairo SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(113, 187);
+            this.label8.Location = new System.Drawing.Point(113, 175);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 20);
             this.label8.TabIndex = 35;
@@ -70,7 +71,7 @@ namespace inventory_project.view
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cairo SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(318, 121);
+            this.label6.Location = new System.Drawing.Point(329, 120);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 20);
             this.label6.TabIndex = 33;
@@ -90,7 +91,7 @@ namespace inventory_project.view
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cairo SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(318, 72);
+            this.label4.Location = new System.Drawing.Point(329, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 31;
@@ -106,13 +107,14 @@ namespace inventory_project.view
             this.label3.TabIndex = 30;
             this.label3.Text = "Product Name";
             // 
-            // dataGridView1
+            // dgv_invoice
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 307);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(794, 141);
-            this.dataGridView1.TabIndex = 29;
+            this.dgv_invoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_invoice.Location = new System.Drawing.Point(0, 307);
+            this.dgv_invoice.Name = "dgv_invoice";
+            this.dgv_invoice.Size = new System.Drawing.Size(794, 159);
+            this.dgv_invoice.TabIndex = 29;
+            this.dgv_invoice.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_invoice_CellClick);
             // 
             // label2
             // 
@@ -125,66 +127,70 @@ namespace inventory_project.view
             this.label2.TabIndex = 14;
             this.label2.Text = "Looking for something?";
             // 
-            // button4
+            // SearchForInvoice
             // 
-            this.button4.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(17, 54);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 28);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = true;
+            this.SearchForInvoice.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchForInvoice.Location = new System.Drawing.Point(17, 54);
+            this.SearchForInvoice.Name = "SearchForInvoice";
+            this.SearchForInvoice.Size = new System.Drawing.Size(80, 28);
+            this.SearchForInvoice.TabIndex = 13;
+            this.SearchForInvoice.Text = "Search";
+            this.SearchForInvoice.UseVisualStyleBackColor = true;
+            this.SearchForInvoice.Click += new System.EventHandler(this.SearchForInvoice_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.SearchForInvoice);
+            this.panel2.Controls.Add(this.Search);
+            this.panel2.Controls.Add(this.UpdateInvoice);
+            this.panel2.Controls.Add(this.DeleteInvoice);
+            this.panel2.Controls.Add(this.AddToInvoice);
             this.panel2.Location = new System.Drawing.Point(595, 67);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(199, 244);
             this.panel2.TabIndex = 25;
             // 
-            // textBox2
+            // Search
             // 
-            this.textBox2.Location = new System.Drawing.Point(17, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 20);
-            this.textBox2.TabIndex = 12;
+            this.Search.Location = new System.Drawing.Point(17, 28);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(168, 20);
+            this.Search.TabIndex = 12;
             // 
-            // button2
+            // UpdateInvoice
             // 
-            this.button2.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(55, 154);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 30);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.UpdateInvoice.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateInvoice.Location = new System.Drawing.Point(55, 154);
+            this.UpdateInvoice.Name = "UpdateInvoice";
+            this.UpdateInvoice.Size = new System.Drawing.Size(100, 30);
+            this.UpdateInvoice.TabIndex = 10;
+            this.UpdateInvoice.Text = "Update";
+            this.UpdateInvoice.UseVisualStyleBackColor = true;
+            this.UpdateInvoice.Click += new System.EventHandler(this.UpdateInvoice_Click);
             // 
-            // button3
+            // DeleteInvoice
             // 
-            this.button3.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(55, 190);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 30);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.DeleteInvoice.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteInvoice.Location = new System.Drawing.Point(55, 190);
+            this.DeleteInvoice.Name = "DeleteInvoice";
+            this.DeleteInvoice.Size = new System.Drawing.Size(100, 30);
+            this.DeleteInvoice.TabIndex = 11;
+            this.DeleteInvoice.Text = "Delete";
+            this.DeleteInvoice.UseVisualStyleBackColor = true;
+            this.DeleteInvoice.Click += new System.EventHandler(this.DeleteInvoice_Click);
             // 
-            // button1
+            // AddToInvoice
             // 
-            this.button1.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(55, 118);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 30);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddToInvoice.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddToInvoice.Location = new System.Drawing.Point(55, 118);
+            this.AddToInvoice.Name = "AddToInvoice";
+            this.AddToInvoice.Size = new System.Drawing.Size(100, 30);
+            this.AddToInvoice.TabIndex = 9;
+            this.AddToInvoice.Text = "Add";
+            this.AddToInvoice.UseVisualStyleBackColor = true;
+            this.AddToInvoice.Click += new System.EventHandler(this.AddToInvoice_Click);
             // 
             // label7
             // 
@@ -196,33 +202,26 @@ namespace inventory_project.view
             this.label7.TabIndex = 34;
             this.label7.Text = "Quantity";
             // 
-            // textBox5
+            // Unit_Price
             // 
-            this.textBox5.Location = new System.Drawing.Point(117, 95);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(154, 20);
-            this.textBox5.TabIndex = 26;
+            this.Unit_Price.Location = new System.Drawing.Point(333, 95);
+            this.Unit_Price.Name = "Unit_Price";
+            this.Unit_Price.Size = new System.Drawing.Size(154, 20);
+            this.Unit_Price.TabIndex = 24;
             // 
-            // textBox4
+            // Provider
             // 
-            this.textBox4.Location = new System.Drawing.Point(322, 95);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 20);
-            this.textBox4.TabIndex = 24;
+            this.Provider.Location = new System.Drawing.Point(333, 143);
+            this.Provider.Name = "Provider";
+            this.Provider.Size = new System.Drawing.Size(154, 20);
+            this.Provider.TabIndex = 23;
             // 
-            // textBox3
+            // Bill_Id
             // 
-            this.textBox3.Location = new System.Drawing.Point(322, 143);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 20);
-            this.textBox3.TabIndex = 23;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(53, 20);
-            this.textBox1.TabIndex = 22;
+            this.Bill_Id.Location = new System.Drawing.Point(15, 95);
+            this.Bill_Id.Name = "Bill_Id";
+            this.Bill_Id.Size = new System.Drawing.Size(53, 20);
+            this.Bill_Id.TabIndex = 22;
             // 
             // panel1
             // 
@@ -244,44 +243,64 @@ namespace inventory_project.view
             this.label1.TabIndex = 5;
             this.label1.Text = "Bill MANAGMENT";
             // 
-            // textBox6
+            // Quantity
             // 
-            this.textBox6.Location = new System.Drawing.Point(117, 143);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(154, 20);
-            this.textBox6.TabIndex = 36;
+            this.Quantity.Location = new System.Drawing.Point(117, 143);
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Size = new System.Drawing.Size(154, 20);
+            this.Quantity.TabIndex = 36;
             // 
-            // dateTimePicker1
+            // Date
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(117, 210);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 37;
+            this.Date.Location = new System.Drawing.Point(117, 198);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(200, 20);
+            this.Date.TabIndex = 37;
             // 
-            // bills
+            // Products
+            // 
+            this.Products.FormattingEnabled = true;
+            this.Products.Location = new System.Drawing.Point(117, 94);
+            this.Products.Name = "Products";
+            this.Products.Size = new System.Drawing.Size(154, 21);
+            this.Products.TabIndex = 38;
+            // 
+            // GoStock
+            // 
+            this.GoStock.Location = new System.Drawing.Point(277, 95);
+            this.GoStock.Name = "GoStock";
+            this.GoStock.Size = new System.Drawing.Size(50, 23);
+            this.GoStock.TabIndex = 55;
+            this.GoStock.Text = "Edit";
+            this.GoStock.UseVisualStyleBackColor = true;
+            this.GoStock.Click += new System.EventHandler(this.GoStock_Click);
+            // 
+            // invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 406);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox6);
+            this.ClientSize = new System.Drawing.Size(794, 466);
+            this.Controls.Add(this.GoStock);
+            this.Controls.Add(this.Products);
+            this.Controls.Add(this.Date);
+            this.Controls.Add(this.Quantity);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_invoice);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Unit_Price);
+            this.Controls.Add(this.Provider);
+            this.Controls.Add(this.Bill_Id);
             this.Controls.Add(this.panel1);
-            this.Name = "bills";
+            this.Name = "invoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "bills";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Invoice";
+            this.Load += new System.EventHandler(this.invoice_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invoice)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -298,22 +317,23 @@ namespace inventory_project.view
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_invoice;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button SearchForInvoice;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Search;
+        private System.Windows.Forms.Button UpdateInvoice;
+        private System.Windows.Forms.Button DeleteInvoice;
+        private System.Windows.Forms.Button AddToInvoice;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Unit_Price;
+        private System.Windows.Forms.TextBox Provider;
+        private System.Windows.Forms.TextBox Bill_Id;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox Quantity;
+        private System.Windows.Forms.DateTimePicker Date;
+        private System.Windows.Forms.ComboBox Products;
+        private System.Windows.Forms.Button GoStock;
     }
 }

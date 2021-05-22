@@ -17,7 +17,7 @@ namespace inventory_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new view.home());
+            Application.Run(new view.login());
         }
     }
 }

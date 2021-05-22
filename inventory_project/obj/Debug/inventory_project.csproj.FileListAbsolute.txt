@@ -30,4 +30,3 @@ C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\invent
 C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.view.invoice.resources
 C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.view.outvoice.resources
 C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.view.login.resources
-C:\Users\basma\source\repos\inventory_project\inventory_project\obj\Debug\inventory_project.view.signup.resources

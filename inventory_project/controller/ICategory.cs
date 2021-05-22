@@ -7,13 +7,11 @@ using inventory_project.model;
 
 namespace inventory_project.controller
 {
-    interface IDbOperations<T>
+    interface ICategory
     {
-        T SelectAll();
-        int insert();
-        int update();
-        int delete();
-        int search();
-
+        List<Categories> SelectAll();
+        void insert(string name);
+        void update(int id, string name);
+        void delete(int id);
     }
 }
