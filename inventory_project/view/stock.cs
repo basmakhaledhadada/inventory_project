@@ -24,7 +24,7 @@ namespace inventory_project.view
             Category.DataSource = c.SelectAll();
             //SESSION.p.ForEach(i => Console.WriteLine(i.roll_id));
            //Permissions pr = SESSION.p.SingleOrDefault(i => i.roll_id == "stock_viewonly");
-           MessageBox.Show(SESSION.Id.ToString());
+           MessageBox.Show(Program.user_id.ToString());
 
 
 

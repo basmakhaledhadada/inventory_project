@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using inventory_project.controller;
 
@@ -37,11 +31,7 @@ namespace inventory_project.view
                 this.Hide();
                 home h = new home();
                 h.ShowDialog();
-                SESSION.Id = id;
-
-
-                
-                
+                Program.user_id = 4;
             }
             else
             {

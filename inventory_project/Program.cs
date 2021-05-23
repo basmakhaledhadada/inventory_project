@@ -9,6 +9,7 @@ namespace inventory_project
 {
     static class Program
     {
+        public static int user_id = 0;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
