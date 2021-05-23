@@ -22,49 +22,21 @@ namespace inventory_project.view
             Category.ValueMember = "id";
             Category.DisplayMember = "name";
             Category.DataSource = c.SelectAll();
-            //SESSION.p.ForEach(i => Console.WriteLine(i.roll_id));
-           //Permissions pr = SESSION.p.SingleOrDefault(i => i.roll_id == "stock_viewonly");
-           MessageBox.Show(Program.user_id.ToString());
-
-
-
-
-
-
-            //if (pr != null)
-            //{
-            //    AddToStock.Enabled = false;
-            //    UpdateForStock.Enabled = false;
-            //    DeleteForStock.Enabled = false;
-            //    Edit.Enabled = false;
-            //}
-           
-            //response = SESSION.p.Find(r => r.roll_id == "stock_insert");
-            //if (response != null)
-            //{
-            //    UpdateForStock.Enabled = false;
-            //    DeleteForStock.Enabled = false;
-            //}
-            //response = SESSION.p.Find(r => r.roll_id == "stock_update");
-            //if (response != null)
-            //{
-            //    AddToStock.Enabled = false;
-            //    DeleteForStock.Enabled = false;
-            //}
-            //response = SESSION.p.Find(r => r.roll_id == "stock_delete");
-            //if (response != null)
-            //{
-            //    AddToStock.Enabled = false;
-            //    UpdateForStock.Enabled = false;
-            //}
-
+            checkPermission();
         }
 
         private void AddToStock_Click(object sender, EventArgs e)
         {
-            sc.insert(Product_Name.Text, float.Parse(Unit_Price.Text), Description.Text, Int32.Parse(Quantity.Text), Int32.Parse(Category.SelectedValue.ToString()));
-            dgv_stock.DataSource = sc.SelectAll();
-           
+            if (Product_Name.Text == "" || Unit_Price.Text == "" || Description.Text == "" || Quantity.Text == "" || Category.SelectedIndex == -1)
+            {
+                MessageBox.Show("Inputs cant be empty", "Invalid inputs", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                sc.insert(Product_Name.Text, float.Parse(Unit_Price.Text), Description.Text, Int32.Parse(Quantity.Text), Int32.Parse(Category.SelectedValue.ToString()));
+                dgv_stock.DataSource = sc.SelectAll();
+            }
+            Reset();
         }
 
         private void dgv_stock_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -82,14 +54,24 @@ namespace inventory_project.view
 
         private void UpdateForStock_Click(object sender, EventArgs e)
         {
-            sc.update(Int32.Parse(Product_Id.Text), Product_Name.Text, float.Parse(Unit_Price.Text), Description.Text, Int32.Parse(Quantity.Text), Int32.Parse(Category.SelectedValue.ToString()));
-            dgv_stock.DataSource = sc.SelectAll();
+            if (Product_Name.Text == "" || Unit_Price.Text == "" || Description.Text == "" || Quantity.Text == "" || Category.SelectedIndex == -1)
+            {
+                MessageBox.Show("Inputs cant be empty", "Invalid inputs", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                sc.update(Int32.Parse(Product_Id.Text), Product_Name.Text, float.Parse(Unit_Price.Text), Description.Text, Int32.Parse(Quantity.Text), Int32.Parse(Category.SelectedValue.ToString()));
+                dgv_stock.DataSource = sc.SelectAll();
+            }
+            Reset();
+
         }
 
         private void DeleteForStock_Click(object sender, EventArgs e)
         {
             sc.delete(Int32.Parse(Product_Id.Text));
             dgv_stock.DataSource = sc.SelectAll();
+            Reset();
         }
 
         private void Edit_Click(object sender, EventArgs e)
@@ -110,7 +92,44 @@ namespace inventory_project.view
                 Quantity.Text = product.quantity.ToString();
                 Description.Text = product.description;
             }
+        }
 
+        public void checkPermission()
+        {
+            Permissions pr = Program.list.SingleOrDefault(i => i.roll_id == "stock_viewonly");
+            if (pr != null)
+            {
+                Edit.Enabled = false;
+                pr = null;
+            }
+
+            pr = Program.list.SingleOrDefault(r => r.roll_id == "stock_insert");
+            if (pr != null)
+            {
+                AddToStock.Enabled = true;
+                pr = null;
+            }
+            pr = Program.list.SingleOrDefault(r => r.roll_id == "stock_update");
+            if (pr != null)
+            {
+                UpdateForStock.Enabled = true;
+                pr = null;
+            }
+            pr = Program.list.SingleOrDefault(r => r.roll_id == "stock_delete");
+            if (pr != null)
+            {
+                DeleteForStock.Enabled = true;
+                pr = null;
+            }
+        }
+        public void Reset()
+        {
+            Product_Id.Text = "";
+            Product_Name.Text = "";
+            Unit_Price.Text = "";
+            Description.Text = "";
+            Quantity.Text = "";
+            Category.SelectedIndex = -1;
         }
     }
 }

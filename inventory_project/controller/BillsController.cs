@@ -43,6 +43,7 @@ namespace inventory_project.controller
                 cmd.Parameters.AddWithValue("client", client);
                 cmd.ExecuteNonQuery();
                 sql = "";
+                updateStock(product_id, quantity, bill_type);
             }
             else
             {
@@ -56,6 +57,7 @@ namespace inventory_project.controller
                 cmd.Parameters.AddWithValue("client", client);
                 cmd.ExecuteNonQuery();
                 sql = "";
+                updateStock(product_id, quantity, bill_type);
             }
         }
 
@@ -65,12 +67,12 @@ namespace inventory_project.controller
             Bills bl = list.SingleOrDefault(b => b.bill_id == bill);
             if (bl is null)
             {
-                MessageBox.Show("bill not found");
+                MessageBox.Show("bill not found", "missing bill", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return bl;
             }
             else
             {
-                MessageBox.Show("bill found!");
+                MessageBox.Show("bill found", "found you bill", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return bl;
             }
         }
@@ -127,6 +129,7 @@ namespace inventory_project.controller
                 cmd.Parameters.AddWithValue("client", client);
                 cmd.ExecuteNonQuery();
                 sql = "";
+                updateStock(product_id, quantity, bill_type);
             }
             else
             {
@@ -141,8 +144,47 @@ namespace inventory_project.controller
                 cmd.Parameters.AddWithValue("client", client);
                 cmd.ExecuteNonQuery();
                 sql = "";
+                updateStock(product_id, quantity, bill_type);
             }
 
+        }
+        public void updateStock(int product_id, int quantity, string bill_type)
+        {
+            if (bill_type == "invoice")
+            {
+                sql = "UPDATE inventory.stock SET `quantity`=@quantity + `quantity` WHERE `product_id`=@product_id";
+                MySqlCommand cmd = new MySqlCommand(sql, DBconn.Connection);
+                cmd.Parameters.AddWithValue("product_id", product_id);
+                cmd.Parameters.AddWithValue("quantity", quantity);
+                cmd.ExecuteNonQuery();
+                sql = "";
+            }
+            if (bill_type == "outvoice")
+            {
+                sql = "UPDATE inventory.stock SET `quantity`= `quantity` - @quantity WHERE `product_id`=@product_id";
+                MySqlCommand cmd = new MySqlCommand(sql, DBconn.Connection);
+                cmd.Parameters.AddWithValue("product_id", product_id);
+                cmd.Parameters.AddWithValue("quantity", quantity);
+                cmd.ExecuteNonQuery();
+                sql = "";
+            }
+
+        }
+
+        public int getQuantity(int product_id)
+        {
+            int q = 0;
+            sql = "SELECT quantity FROM inventory.stock where product_id=@product_id;";
+            MySqlCommand cmd = new MySqlCommand(sql, DBconn.Connection);
+            cmd.Parameters.AddWithValue("product_id", product_id);
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    q = reader.GetInt32(0);
+                }
+            }
+            return q;
         }
     }
 }

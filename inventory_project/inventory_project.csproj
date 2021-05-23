@@ -70,7 +70,6 @@
     <Compile Include="model\Users.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SESSION.cs" />
     <Compile Include="view\invoice.cs">
       <SubType>Form</SubType>
     </Compile>

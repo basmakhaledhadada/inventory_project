@@ -71,12 +71,12 @@ namespace inventory_project.controller
                 Stock item = list.SingleOrDefault(p => p.id == id);
                 if (item is null)
                 {
-                    MessageBox.Show("Product not found");
+                    MessageBox.Show("product not found", "missing product", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return item;
                 }
                 else
                 {
-                    MessageBox.Show("Product found!");
+                    MessageBox.Show("product found", "found product", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return item;
                 }
                 

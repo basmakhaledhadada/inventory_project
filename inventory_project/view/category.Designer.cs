@@ -31,10 +31,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_category = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.UpdateCategory = new System.Windows.Forms.Button();
             this.DeleteCategory = new System.Windows.Forms.Button();
             this.AddToCategory = new System.Windows.Forms.Button();
@@ -75,35 +72,10 @@
             this.dgv_category.Size = new System.Drawing.Size(476, 98);
             this.dgv_category.TabIndex = 29;
             this.dgv_category.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_category_CellClick);
-    
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cairo", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(13, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 23);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Looking for something?";
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(17, 54);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 28);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.UpdateCategory);
             this.panel2.Controls.Add(this.DeleteCategory);
             this.panel2.Controls.Add(this.AddToCategory);
@@ -111,13 +83,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(199, 244);
             this.panel2.TabIndex = 25;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(17, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 20);
-            this.textBox2.TabIndex = 12;
             // 
             // UpdateCategory
             // 
@@ -128,7 +93,7 @@
             this.UpdateCategory.TabIndex = 10;
             this.UpdateCategory.Text = "Update";
             this.UpdateCategory.UseVisualStyleBackColor = true;
-            this.UpdateCategory.Click += new System.EventHandler(this.button2_Click);
+            this.UpdateCategory.Click += new System.EventHandler(this.UpdateCategory_Click);
             // 
             // DeleteCategory
             // 
@@ -150,7 +115,7 @@
             this.AddToCategory.TabIndex = 9;
             this.AddToCategory.Text = "Add";
             this.AddToCategory.UseVisualStyleBackColor = true;
-            this.AddToCategory.Click += new System.EventHandler(this.button1_Click);
+            this.AddToCategory.Click += new System.EventHandler(this.AddToCategory_Click);
             // 
             // Category_Name
             // 
@@ -161,6 +126,7 @@
             // 
             // Category_Id
             // 
+            this.Category_Id.Enabled = false;
             this.Category_Id.Location = new System.Drawing.Point(18, 95);
             this.Category_Id.Name = "Category_Id";
             this.Category_Id.Size = new System.Drawing.Size(53, 20);
@@ -204,7 +170,6 @@
             this.Load += new System.EventHandler(this.category_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_category)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -216,10 +181,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgv_category;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button UpdateCategory;
         private System.Windows.Forms.Button DeleteCategory;
         private System.Windows.Forms.Button AddToCategory;

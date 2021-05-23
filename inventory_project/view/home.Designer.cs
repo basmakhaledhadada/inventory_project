@@ -40,6 +40,7 @@ namespace inventory_project.view
             this.GoStock = new System.Windows.Forms.Button();
             this.GoInvoice = new System.Windows.Forms.Button();
             this.GoOutvoice = new System.Windows.Forms.Button();
+            this.Logout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -66,7 +67,6 @@ namespace inventory_project.view
             this.label1.Size = new System.Drawing.Size(261, 39);
             this.label1.TabIndex = 5;
             this.label1.Text = "INVENTORY MANAGMENT";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -168,11 +168,27 @@ namespace inventory_project.view
             this.GoOutvoice.UseVisualStyleBackColor = false;
             this.GoOutvoice.Click += new System.EventHandler(this.GoOutvoice_Click);
             // 
+            // Logout
+            // 
+            this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logout.Font = new System.Drawing.Font("Cairo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout.ForeColor = System.Drawing.Color.White;
+            this.Logout.Location = new System.Drawing.Point(632, 423);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(150, 38);
+            this.Logout.TabIndex = 9;
+            this.Logout.Text = "Log out";
+            this.Logout.UseVisualStyleBackColor = false;
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 450);
+            this.ClientSize = new System.Drawing.Size(794, 473);
+            this.Controls.Add(this.Logout);
             this.Controls.Add(this.GoOutvoice);
             this.Controls.Add(this.GoInvoice);
             this.Controls.Add(this.GoStock);
@@ -187,7 +203,6 @@ namespace inventory_project.view
             this.Name = "home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "home";
-            this.Load += new System.EventHandler(this.home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -210,5 +225,6 @@ namespace inventory_project.view
         private System.Windows.Forms.Button GoStock;
         private System.Windows.Forms.Button GoInvoice;
         private System.Windows.Forms.Button GoOutvoice;
+        private System.Windows.Forms.Button Logout;
     }
 }

@@ -61,12 +61,12 @@ namespace inventory_project.controller
                 Users us = list.SingleOrDefault(u => u.id == id);
                 if (us is null)
                 {
-                    MessageBox.Show("User not found");
+                    MessageBox.Show("user not found", "missing user", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return us;
                 }
                 else
                 {
-                    MessageBox.Show("User found!");
+                    MessageBox.Show("user found", "found user", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return us;
                 }
 

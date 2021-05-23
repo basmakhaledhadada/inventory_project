@@ -161,6 +161,7 @@ namespace inventory_project.view
             // 
             // UpdateInvoice
             // 
+            this.UpdateInvoice.Enabled = false;
             this.UpdateInvoice.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateInvoice.Location = new System.Drawing.Point(55, 154);
             this.UpdateInvoice.Name = "UpdateInvoice";
@@ -172,6 +173,7 @@ namespace inventory_project.view
             // 
             // DeleteInvoice
             // 
+            this.DeleteInvoice.Enabled = false;
             this.DeleteInvoice.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteInvoice.Location = new System.Drawing.Point(55, 190);
             this.DeleteInvoice.Name = "DeleteInvoice";
@@ -183,6 +185,7 @@ namespace inventory_project.view
             // 
             // AddToInvoice
             // 
+            this.AddToInvoice.Enabled = false;
             this.AddToInvoice.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddToInvoice.Location = new System.Drawing.Point(55, 118);
             this.AddToInvoice.Name = "AddToInvoice";
@@ -218,6 +221,7 @@ namespace inventory_project.view
             // 
             // Bill_Id
             // 
+            this.Bill_Id.Enabled = false;
             this.Bill_Id.Location = new System.Drawing.Point(15, 95);
             this.Bill_Id.Name = "Bill_Id";
             this.Bill_Id.Size = new System.Drawing.Size(53, 20);

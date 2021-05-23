@@ -128,6 +128,7 @@ namespace inventory_project.view
             // 
             // AddToStock
             // 
+            this.AddToStock.Enabled = false;
             this.AddToStock.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddToStock.Location = new System.Drawing.Point(55, 118);
             this.AddToStock.Name = "AddToStock";
@@ -139,6 +140,7 @@ namespace inventory_project.view
             // 
             // UpdateForStock
             // 
+            this.UpdateForStock.Enabled = false;
             this.UpdateForStock.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateForStock.Location = new System.Drawing.Point(55, 154);
             this.UpdateForStock.Name = "UpdateForStock";
@@ -150,6 +152,7 @@ namespace inventory_project.view
             // 
             // DeleteForStock
             // 
+            this.DeleteForStock.Enabled = false;
             this.DeleteForStock.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteForStock.Location = new System.Drawing.Point(55, 190);
             this.DeleteForStock.Name = "DeleteForStock";

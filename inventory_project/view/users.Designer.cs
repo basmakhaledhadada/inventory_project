@@ -166,6 +166,7 @@ namespace inventory_project.view
             // 
             // UpdateUsers
             // 
+            this.UpdateUsers.Enabled = false;
             this.UpdateUsers.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateUsers.Location = new System.Drawing.Point(55, 154);
             this.UpdateUsers.Name = "UpdateUsers";
@@ -177,6 +178,7 @@ namespace inventory_project.view
             // 
             // DeleteUsers
             // 
+            this.DeleteUsers.Enabled = false;
             this.DeleteUsers.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteUsers.Location = new System.Drawing.Point(55, 190);
             this.DeleteUsers.Name = "DeleteUsers";
@@ -188,6 +190,7 @@ namespace inventory_project.view
             // 
             // AddToUsers
             // 
+            this.AddToUsers.Enabled = false;
             this.AddToUsers.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddToUsers.Location = new System.Drawing.Point(55, 118);
             this.AddToUsers.Name = "AddToUsers";

@@ -52,6 +52,8 @@ namespace inventory_project.view
             this.label8 = new System.Windows.Forms.Label();
             this.Products = new System.Windows.Forms.ComboBox();
             this.GoStock = new System.Windows.Forms.Button();
+            this.Increase = new System.Windows.Forms.Button();
+            this.Decrease = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_outvoice)).BeginInit();
             this.panel2.SuspendLayout();
@@ -147,6 +149,7 @@ namespace inventory_project.view
             // 
             // UpdateOutvoice
             // 
+            this.UpdateOutvoice.Enabled = false;
             this.UpdateOutvoice.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateOutvoice.Location = new System.Drawing.Point(55, 154);
             this.UpdateOutvoice.Name = "UpdateOutvoice";
@@ -158,6 +161,7 @@ namespace inventory_project.view
             // 
             // AddToOutvoice
             // 
+            this.AddToOutvoice.Enabled = false;
             this.AddToOutvoice.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddToOutvoice.Location = new System.Drawing.Point(55, 118);
             this.AddToOutvoice.Name = "AddToOutvoice";
@@ -169,9 +173,10 @@ namespace inventory_project.view
             // 
             // Quantity
             // 
+            this.Quantity.Enabled = false;
             this.Quantity.Location = new System.Drawing.Point(117, 143);
             this.Quantity.Name = "Quantity";
-            this.Quantity.Size = new System.Drawing.Size(154, 20);
+            this.Quantity.Size = new System.Drawing.Size(98, 20);
             this.Quantity.TabIndex = 51;
             // 
             // label6
@@ -239,6 +244,7 @@ namespace inventory_project.view
             // 
             // DeleteOutvoice
             // 
+            this.DeleteOutvoice.Enabled = false;
             this.DeleteOutvoice.Font = new System.Drawing.Font("Cairo SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteOutvoice.Location = new System.Drawing.Point(55, 190);
             this.DeleteOutvoice.Name = "DeleteOutvoice";
@@ -265,6 +271,7 @@ namespace inventory_project.view
             this.Products.Name = "Products";
             this.Products.Size = new System.Drawing.Size(154, 21);
             this.Products.TabIndex = 53;
+            this.Products.SelectedIndexChanged += new System.EventHandler(this.Products_SelectedIndexChanged);
             // 
             // GoStock
             // 
@@ -276,11 +283,33 @@ namespace inventory_project.view
             this.GoStock.UseVisualStyleBackColor = true;
             this.GoStock.Click += new System.EventHandler(this.GoStock_Click);
             // 
+            // Increase
+            // 
+            this.Increase.Location = new System.Drawing.Point(221, 140);
+            this.Increase.Name = "Increase";
+            this.Increase.Size = new System.Drawing.Size(50, 23);
+            this.Increase.TabIndex = 55;
+            this.Increase.Text = "+";
+            this.Increase.UseVisualStyleBackColor = true;
+            this.Increase.Click += new System.EventHandler(this.Increase_Click);
+            // 
+            // Decrease
+            // 
+            this.Decrease.Location = new System.Drawing.Point(277, 140);
+            this.Decrease.Name = "Decrease";
+            this.Decrease.Size = new System.Drawing.Size(50, 23);
+            this.Decrease.TabIndex = 56;
+            this.Decrease.Text = "-";
+            this.Decrease.UseVisualStyleBackColor = true;
+            this.Decrease.Click += new System.EventHandler(this.Decrease_Click);
+            // 
             // outvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 466);
+            this.Controls.Add(this.Decrease);
+            this.Controls.Add(this.Increase);
             this.Controls.Add(this.GoStock);
             this.Controls.Add(this.Products);
             this.Controls.Add(this.Date);
@@ -298,6 +327,7 @@ namespace inventory_project.view
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label8);
             this.Name = "outvoice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "outvoice";
             this.Load += new System.EventHandler(this.outvoice_Load);
             this.panel1.ResumeLayout(false);
@@ -335,5 +365,7 @@ namespace inventory_project.view
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox Products;
         private System.Windows.Forms.Button GoStock;
+        private System.Windows.Forms.Button Increase;
+        private System.Windows.Forms.Button Decrease;
     }
 }

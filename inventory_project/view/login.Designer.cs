@@ -85,6 +85,7 @@ namespace inventory_project.view
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(199, 32);
             this.password.TabIndex = 1;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // label2
             // 
